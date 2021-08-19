@@ -1,13 +1,6 @@
 import styled, { css } from 'styled-components';
 
-//hooks
-import { useAppSelector } from '../../utilities/hooks';
-//selectors
-import { selectCoverScreenStatus } from '../../../features/UI/UISelectors';
-
-function CoverScreen() {
-  const isActive = useAppSelector(selectCoverScreenStatus);
-  console.log(isActive);
+function CoverScreen({ isActive }) {
   return <Container isActive={isActive} />;
 }
 const Container = styled.div<{ isActive: boolean }>`
@@ -20,7 +13,7 @@ const Container = styled.div<{ isActive: boolean }>`
   position: absolute;
 
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 
   ${({ isActive }) => {
     if (isActive) {

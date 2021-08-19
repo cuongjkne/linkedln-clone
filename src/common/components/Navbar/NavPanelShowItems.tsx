@@ -1,19 +1,14 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-//hooks
-import { useAppDispatch } from '../../utilities/hooks';
+
 //keyframes
 import clickNavItem from './keyframes';
 //components
 import UserPanel from '../Panel/UserPanel';
 import WorkPanel from '../Panel/WorkPanel';
-
-//actions
-import { coverScreenShowed, coverScreenHidden } from '../../../features/UI/UISlice';
+import CoverScreen from '../CoverScreen/CoverScreen';
 
 function NavPanelShowItems() {
-  const dispatch = useAppDispatch();
-
   const [isUserItemActive, setIsUserItemActive] = useState(false);
   const [isWorkItemActive, setIsWorkItemActive] = useState(false);
   const toogleUserItemState = () => {
@@ -26,20 +21,14 @@ function NavPanelShowItems() {
 
   const toogleWorkItemState = () => {
     setIsWorkItemActive(!isWorkItemActive);
-    if (!isWorkItemActive) {
-      dispatch(coverScreenShowed());
-    } else {
-      dispatch(coverScreenHidden());
-    }
   };
 
   const blurWorkItem = (e) => {
     setIsWorkItemActive(false);
-    dispatch(coverScreenHidden());
   };
   return (
     <>
-      <PannelWrapper id="navUserItem" tabIndex={0} onBlur={() => blurUserItem()}>
+      <div id="navUserItem" tabIndex={0} onBlur={() => blurUserItem()}>
         <NavPanelShowItem onMouseDown={() => toogleUserItemState()}>
           <img src="/images/user.svg" alt="user-img" />
           <p>
@@ -56,8 +45,8 @@ function NavPanelShowItems() {
           </p>
         </NavPanelShowItem>
         <UserPanel isActive={isUserItemActive} />
-      </PannelWrapper>
-      <PannelWrapper tabIndex={0} onBlur={(e) => blurWorkItem(e)}>
+      </div>
+      <div tabIndex={0} onBlur={(e) => blurWorkItem(e)}>
         <NavPanelShowItem id="navWorkItem" onMouseDown={() => toogleWorkItemState()}>
           <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor">
             <path d="M10 10h4v4h-4v-4zm0 11h4v-4h-4v4zm-7-7h4v-4H3v4zm0 7h4v-4H3v4zM3 7h4V3H3v4zm14 7h4v-4h-4v4zm0-11v4h4V3h-4zm-7 4h4V3h-4v4zm7 14h4v-4h-4v4z"></path>
@@ -76,11 +65,11 @@ function NavPanelShowItems() {
           </p>
         </NavPanelShowItem>
         <WorkPanel isActive={isWorkItemActive} />
-      </PannelWrapper>
+      </div>
+      <CoverScreen isActive={isWorkItemActive} />
     </>
   );
 }
-const PannelWrapper = styled.div``;
 const NavPanelShowItem = styled.div`
   cursor: pointer;
   display: flex;

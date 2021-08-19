@@ -1,18 +1,14 @@
 import styled from 'styled-components';
 //components
-import Navbar from '../common/components/Navbar/Navbar';
-// import Search from './Search/Search';
-
-//CONTEXT
-import CoverScreen from '../common/components/CoverScreen/CoverScreen';
+import Navbar from '../components/Navbar/Navbar';
+import SearchBox from '../components/Navbar/NavSearch/SearchBox';
 
 function Header() {
   return (
     <Container>
       <img src="/images/linkedin.png" alt="logo" />
-      {/* <Search /> */}
+      <SearchBox />
       <Navbar />
-      <CoverScreen />
     </Container>
   );
 }

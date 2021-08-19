@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 //KEYFRAMES
 import clickNavItem from './keyframes';
@@ -8,7 +8,8 @@ import clickNavItem from './keyframes';
 import { HomeIcon, MessageIcon, NetworkIcon, JobIcon, NotificationIcon } from '../Icon/index';
 
 function NavLinkItems() {
-  const path = window.location.pathname;
+  const history = useHistory();
+  const path = history.location.pathname;
 
   return (
     <>

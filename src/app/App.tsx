@@ -1,9 +1,8 @@
-import React from 'react';
 import { Switch, Route } from 'react-router';
 import './App.css';
 
 //components
-import Header from '../layout/Header';
+import Header from '../common/layout/Header';
 
 function App() {
   return (

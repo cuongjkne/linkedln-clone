@@ -7,7 +7,7 @@ function UserPanel({ isActive }) {
   ) : (
     <Container>
       <Header>
-        <img src="/images/user.svg" />
+        <img src="/images/user.svg" alt="user.svg" />
         <div>
           <h5>Cường Nguyễn</h5>
           <p>Student at The Earth</p>
