@@ -10,12 +10,8 @@ export const NavPanelShowItem = styled.div`
     flex-direction: column;
     align-items: center;
     min-height: 52px;
-    min-width: 82px;
     justify-content: center;
     position: relative;
-    svg {
-      fill: var(--nav-color-icon);
-    }
 
     & > img:first-of-type {
       width: 25px;
@@ -27,6 +23,7 @@ export const NavPanelShowItem = styled.div`
 
       svg {
         width: 17px;
+        height: 17px;
         position: relative;
         top: -2px;
         filter: invert(40%);

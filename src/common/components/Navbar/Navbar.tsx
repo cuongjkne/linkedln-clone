@@ -1,38 +1,18 @@
-import styled from 'styled-components';
-
-//COMPONENTS
+//components
 import NavLinkItems from './NavLinkItems/NavLinkItems';
 import NavPanelShowItems from './NavPanelShowItems/NavPanelShowItems';
-
+import SearchBox from './SearchBox/SearchBox';
+//styles
+import { Container } from './Navbar.style';
 function Navbar() {
+  //TODO:handle nav items on mobile
   return (
     <Container>
+      <SearchBox />
       <NavLinkItems />
       <NavPanelShowItems />
     </Container>
   );
 }
-
-const Container = styled.nav`
-  display: flex;
-  min-height: 52px;
-
-  font-weight: 400;
-  letter-spacing: 0.3px;
-  align-items: center;
-
-  p {
-    color: var(--nav-color-icon);
-    font-size: var(--nav-font-size);
-  }
-  #navUserItem {
-    position: relative;
-    border-right: 1px solid #eff2f8;
-    & > img:first-child {
-      width: 25px;
-      border-radius: 20px;
-    }
-  }
-`;
 
 export default Navbar;

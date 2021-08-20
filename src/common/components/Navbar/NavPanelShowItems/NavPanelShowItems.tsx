@@ -3,7 +3,7 @@ import { useState } from 'react';
 //styles
 import { NavPanelShowItem } from './NavPanelShowItems.style';
 //components
-import UserPanel from '../../Panel/UserPanel';
+import UserPanel from '../../Panel/UserPanel/UserPanel';
 import WorkPanel from '../../Panel/WorkPanel';
 import CoverScreen from '../../CoverScreen/CoverScreen';
 
@@ -46,7 +46,7 @@ function NavPanelShowItems() {
         <UserPanel isactive={isUserItemActive} />
       </div>
       <div tabIndex={0} onBlur={(e) => blurWorkItem(e)}>
-        <NavPanelShowItem id="navWorkItem" onMouseDown={() => toogleWorkItemState()}>
+        <NavPanelShowItem onMouseDown={() => toogleWorkItemState()}>
           <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor">
             <path d="M10 10h4v4h-4v-4zm0 11h4v-4h-4v4zm-7-7h4v-4H3v4zm0 7h4v-4H3v4zM3 7h4V3H3v4zm14 7h4v-4h-4v4zm0-11v4h4V3h-4zm-7 4h4V3h-4v4zm7 14h4v-4h-4v4z"></path>
           </svg>

@@ -10,9 +10,7 @@ export const NavLinkItem = styled(Link)<{ isactive: number }>`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90px;
     height: fit-content;
-
     &::after {
       content: ' ';
       width: 100%;
@@ -27,11 +25,7 @@ export const NavLinkItem = styled(Link)<{ isactive: number }>`
     p {
       margin-top: 2px;
     }
-    svg {
-      fill: var(--nav-color-icon);
-      width: 27px;
-      height: 27px;
-    }
+
     &:active {
       svg,
       p {

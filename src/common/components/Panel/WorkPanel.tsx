@@ -21,7 +21,7 @@ const Panel = styled.div<{ isactive: boolean }>`
   position: absolute;
 
   transition: transform 0.5s ease-in-out;
-  transform: translateX(100%);
+  transform: translateX(150%);
   ${({ isactive }) => {
     if (isactive) {
       return css`

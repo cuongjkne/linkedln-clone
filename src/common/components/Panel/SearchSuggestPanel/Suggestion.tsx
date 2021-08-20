@@ -5,7 +5,7 @@ function Suggestion({ text, to }) {
   return (
     <Container to={to}>
       <img src="/images/search-icon.svg" alt="search-icon" />
-      <p>{text}</p>
+      <span>{text}</span>
     </Container>
   );
 }
@@ -16,11 +16,11 @@ const Container = styled(Link)`
   width: 100%;
   height: 40px;
   padding: 20px;
-  p {
-    margin-left: 25px;
+  span {
+    margin-left: 20px;
     font-size: 16px;
     color: black;
-    font-weight: 400;
+    font-weight: 440;
   }
   &:hover {
     background-color: rgb(242, 242, 238);

@@ -8,22 +8,24 @@ export const Wrapper = styled.div<{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-right: auto;
     min-height: 52px;
+    flex-basis: 30% !important;
   }
 
   @media (max-width: 1024px) {
-    margin-right: unset;
+    flex-basis: 0% !important;
     ${({ isactive }) =>
       isactive &&
       css`
-        padding-left: 40px;
+        left: 100px;
+        width: 100%;
         position: absolute;
-        height: 100%;
         z-index: 1;
         background-color: white;
-        width: 100%;
       `}
+  }
+  @media (max-width: 768px) {
+    left: 80px;
   }
 `;
 export const SearchInput = styled.div<{
@@ -67,7 +69,7 @@ export const SearchInput = styled.div<{
 
   @media (max-width: 1024px) {
     transform: scale(0);
-    width: 88vw;
+    width: 85%;
     position: absolute;
     ${({ isactive }) =>
       isactive &&
@@ -76,6 +78,9 @@ export const SearchInput = styled.div<{
         transform: scale(1);
       `}
   }
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 export const SearchItem = styled.div<{ isactive: boolean }>`
   display: none;
@@ -83,12 +88,7 @@ export const SearchItem = styled.div<{ isactive: boolean }>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90px;
     cursor: pointer;
-    svg {
-      width: 27px;
-      height: 27px;
-    }
 
     p {
       margin-top: 2px;
