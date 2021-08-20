@@ -1,12 +1,14 @@
 import { Switch, Route } from 'react-router';
-import './App.css';
 
+//styles
+import Global from './styles/global.style';
 //components
-import Header from '../common/layout/Header';
+import Header from '../common/layouts/Header/Header';
 
 function App() {
   return (
     <div className="App">
+      <Global />
       <Switch>
         <Route exact path="/feed">
           <Header />

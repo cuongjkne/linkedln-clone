@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-function JobIcon({ isActive }) {
+function JobIcon({ isactive }) {
   return (
-    <Container isActive={isActive}>
+    <Container isactive={isactive}>
       <svg width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="jobIcon-handle"
@@ -27,7 +27,7 @@ function JobIcon({ isActive }) {
   );
 }
 
-const Container = styled.div<{ isActive: boolean }>`
+const Container = styled.div<{ isactive: boolean }>`
   display: inherit;
   svg {
     #jobIcon-cover {
@@ -39,8 +39,8 @@ const Container = styled.div<{ isActive: boolean }>`
       transition: transform 0.2s ease-in-out;
     }
   }
-  ${({ isActive }) => {
-    if (isActive) {
+  ${({ isactive }) => {
+    if (isactive) {
       return css`
         svg {
           #jobIcon-cover {

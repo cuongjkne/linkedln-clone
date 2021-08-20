@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 //COMPONENTS
-import NavLinkItems from './NavLinkItems';
-import NavPanelShowItems from './NavPanelShowItems';
+import NavLinkItems from './NavLinkItems/NavLinkItems';
+import NavPanelShowItems from './NavPanelShowItems/NavPanelShowItems';
 
 function Navbar() {
   return (

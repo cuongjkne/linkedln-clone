@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 
-function WorkPanel({ isActive }) {
+function WorkPanel({ isactive }) {
   return (
     <Container>
-      <Panel isActive={isActive}></Panel>
+      <Panel isactive={isactive}></Panel>
     </Container>
   );
 }
@@ -12,7 +12,7 @@ const Container = styled.div`
   cursor: auto;
 `;
 
-const Panel = styled.div<{ isActive: boolean }>`
+const Panel = styled.div<{ isactive: boolean }>`
   width: 380px;
   height: 100vh;
   border-radius: 5px 0 5px 5px;
@@ -22,8 +22,8 @@ const Panel = styled.div<{ isActive: boolean }>`
 
   transition: transform 0.5s ease-in-out;
   transform: translateX(100%);
-  ${({ isActive }) => {
-    if (isActive) {
+  ${({ isactive }) => {
+    if (isactive) {
       return css`
         transform: translateX(-170px);
       `;

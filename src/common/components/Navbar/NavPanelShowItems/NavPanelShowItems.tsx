@@ -1,12 +1,11 @@
-import styled from 'styled-components';
 import { useState } from 'react';
 
-//keyframes
-import clickNavItem from './keyframes';
+//styles
+import { NavPanelShowItem } from './NavPanelShowItems.style';
 //components
-import UserPanel from '../Panel/UserPanel';
-import WorkPanel from '../Panel/WorkPanel';
-import CoverScreen from '../CoverScreen/CoverScreen';
+import UserPanel from '../../Panel/UserPanel';
+import WorkPanel from '../../Panel/WorkPanel';
+import CoverScreen from '../../CoverScreen/CoverScreen';
 
 function NavPanelShowItems() {
   const [isUserItemActive, setIsUserItemActive] = useState(false);
@@ -44,7 +43,7 @@ function NavPanelShowItems() {
             </svg>
           </p>
         </NavPanelShowItem>
-        <UserPanel isActive={isUserItemActive} />
+        <UserPanel isactive={isUserItemActive} />
       </div>
       <div tabIndex={0} onBlur={(e) => blurWorkItem(e)}>
         <NavPanelShowItem id="navWorkItem" onMouseDown={() => toogleWorkItemState()}>
@@ -64,57 +63,11 @@ function NavPanelShowItems() {
             </svg>
           </p>
         </NavPanelShowItem>
-        <WorkPanel isActive={isWorkItemActive} />
+        <WorkPanel isactive={isWorkItemActive} />
       </div>
-      <CoverScreen isActive={isWorkItemActive} />
+      <CoverScreen isactive={isWorkItemActive} />
     </>
   );
 }
-const NavPanelShowItem = styled.div`
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 52px;
-  min-width: 82px;
-  justify-content: center;
-  position: relative;
-  svg {
-    fill: var(--nav-color-icon);
-  }
-
-  & > img:first-of-type {
-    width: 25px;
-    border-radius: 30px;
-  }
-  & > p:first-of-type {
-    margin-top: 4px;
-    display: flex;
-
-    svg {
-      width: 17px;
-      position: relative;
-      top: -2px;
-      filter: invert(40%);
-    }
-  }
-  &:active {
-    & > img:first-of-type,
-    & > svg:first-of-type,
-    & > p:first-of-type {
-      animation: ${clickNavItem} 0.2s ease-in-out;
-      animation-fill-mode: forwards;
-    }
-  }
-  &:hover {
-    svg {
-      fill: black;
-    }
-
-    & > p:first-of-type {
-      color: black;
-    }
-  }
-`;
 
 export default NavPanelShowItems;

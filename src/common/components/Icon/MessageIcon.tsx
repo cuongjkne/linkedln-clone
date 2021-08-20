@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-function MessageIcon({ isActive }) {
+function MessageIcon({ isactive }) {
   return (
-    <Container isActive={isActive}>
+    <Container isactive={isactive}>
       <svg width="38" height="34" viewBox="-4 -4 41 37" xmlns="http://www.w3.org/2000/svg">
         <path
           id="messageIcon-sub"
@@ -18,7 +18,7 @@ function MessageIcon({ isActive }) {
   );
 }
 
-const Container = styled.div<{ isActive: boolean }>`
+const Container = styled.div<{ isactive: boolean }>`
   display: inherit;
   svg {
     #messageIcon-main {
@@ -30,8 +30,8 @@ const Container = styled.div<{ isActive: boolean }>`
       transition: transform 0.2s ease-in-out;
     }
   }
-  ${({ isActive }) => {
-    if (isActive) {
+  ${({ isactive }) => {
+    if (isactive) {
       return css`
         svg {
           #messageIcon-main {

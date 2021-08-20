@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-function UserPanel({ isActive }) {
-  return !isActive ? (
+function UserPanel({ isactive }) {
+  return !isactive ? (
     <></>
   ) : (
     <Container>

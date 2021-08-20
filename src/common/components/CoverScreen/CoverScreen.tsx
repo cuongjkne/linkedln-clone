@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 
-function CoverScreen({ isActive }) {
-  return <Container isActive={isActive} />;
+function CoverScreen({ isactive }) {
+  return <Container isactive={isactive} />;
 }
-const Container = styled.div<{ isActive: boolean }>`
+const Container = styled.div<{ isactive: boolean }>`
   background-color: rgba(0, 0, 0, 0.4);
   width: 0vw;
   height: 100vh;
@@ -15,8 +15,8 @@ const Container = styled.div<{ isActive: boolean }>`
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 
-  ${({ isActive }) => {
-    if (isActive) {
+  ${({ isactive }) => {
+    if (isactive) {
       return css`
         opacity: 1;
         width: 100vw;

@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 //COMPONENTS
 import Suggestion from './Suggestion';
-function SearchSuggestPanel({ isActive }) {
-  return !isActive ? (
+function SearchSuggestPanel({ isactive }) {
+  return !isactive ? (
     <></>
   ) : (
     <div>
@@ -35,7 +35,8 @@ const Panel = styled.div`
     font-size: 14px;
   }
 
-  @media (max-width: 1028px) {
+  @media (max-width: 1024px) {
+    width: 88vw;
   }
 `;
 

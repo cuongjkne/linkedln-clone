@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-function NetworkIcon({ isActive }) {
+function NetworkIcon({ isactive }) {
   return (
-    <Container isActive={isActive}>
+    <Container isactive={isactive}>
       <svg width="30" height="36" viewBox="-3 -1 33 39" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           id="networkIcon-first"
@@ -17,7 +17,7 @@ function NetworkIcon({ isActive }) {
   );
 }
 
-const Container = styled.div<{ isActive: boolean }>`
+const Container = styled.div<{ isactive: boolean }>`
   display: inherit;
   svg {
     #networkIcon-first {
@@ -29,8 +29,8 @@ const Container = styled.div<{ isActive: boolean }>`
       transition: transform 0.2s ease-in-out;
     }
   }
-  ${({ isActive }) => {
-    if (isActive) {
+  ${({ isactive }) => {
+    if (isactive) {
       return css`
         svg {
           #networkIcon-first {
