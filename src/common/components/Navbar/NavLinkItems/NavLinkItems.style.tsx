@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 //keyframes
 import clickNavItem from '../keyframes';
 
-export const NavLinkItem = styled(Link)<{ isactive: number }>`
+export const NavLinkItem = styled(Link)<{ isactive?: number }>`
   /* max-width:1440px */
   @media only screen {
     display: flex;
@@ -48,9 +48,7 @@ export const NavLinkItem = styled(Link)<{ isactive: number }>`
             transform: scaleX(1);
           }
           svg {
-            fill: black;
-            width: 26px;
-            height: 26px;
+            fill: black !important;
           }
           p {
             color: black;
@@ -62,10 +60,17 @@ export const NavLinkItem = styled(Link)<{ isactive: number }>`
 
   @media (max-width: 768px) {
     &::after {
-      top: 13px;
+      all: unset !important;
     }
     p {
       display: none;
     }
+  }
+  @media (max-width: 375px) {
+    ${({ className }) =>
+      className &&
+      css`
+        display: none;
+      `}
   }
 `;

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-function JobIcon({ isactive }) {
+function JobIcon({ isactive }: { isactive?: boolean }) {
   return (
     <Container isactive={isactive}>
       <svg width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">

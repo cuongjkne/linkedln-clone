@@ -1,17 +1,10 @@
 import styled, { css } from 'styled-components';
 
-function NetworkIcon({ isactive }) {
+function NotificationIcon({ isactive }: { isactive?: boolean }) {
   return (
     <Container isactive={isactive}>
-      <svg width="30" height="36" viewBox="-3 -1 33 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          id="networkIcon-first"
-          d="M15.8824 24.7059V35.2941H0V24.7059C0 21.7059 2.29412 19.4118 5.29412 19.4118H10.5882C13.5882 19.4118 15.8824 21.7059 15.8824 24.7059ZM7.94118 0C3.52941 0 0 3.52941 0 7.94118C0 12.3529 3.52941 15.8824 7.94118 15.8824C12.3529 15.8824 15.8824 12.3529 15.8824 7.94118C15.8824 3.52941 12.3529 0 7.94118 0Z"
-        />
-        <path
-          id="networkIcon-second"
-          d="M30 28.4118V35.2941H19.4118V28.4118C19.4118 26.4618 20.9412 24.9706 22.9412 24.9706H26.4706C28.4706 24.9706 30 26.4618 30 28.4118ZM24.7059 12.3529C21.7647 12.3529 19.4118 14.6471 19.4118 17.5147C19.4118 20.3824 21.7647 22.6765 24.7059 22.6765C27.6471 22.6765 30 20.3824 30 17.5147C30 14.6471 27.6471 12.3529 24.7059 12.3529Z"
-        />
+      <svg width="30" height="30" viewBox="-3 -3 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.4627 25.3731C17.7612 25.8209 17.9104 26.2687 17.9104 26.8657C17.9104 28.5075 16.5672 29.8507 14.9254 29.8507C13.2836 29.8507 11.9403 28.5075 11.9403 26.8657C11.9403 26.2687 12.0896 25.8209 12.3881 25.3731H0V23.8806C0 22.3881 0.597015 21.0448 1.79104 19.7015L3.28358 17.9104H26.7164L28.209 19.7015C29.403 21.194 30 22.5373 30 23.8806V25.3731H17.4627ZM24.1791 8.0597C23.5821 3.43284 19.5522 0 14.9254 0C10.2985 0 6.26866 3.43284 5.67164 8.0597L4.47761 16.4179H25.3731L24.1791 8.0597Z" />
       </svg>
     </Container>
   );
@@ -20,28 +13,22 @@ function NetworkIcon({ isactive }) {
 const Container = styled.div<{ isactive: boolean }>`
   display: inherit;
   svg {
-    #networkIcon-first {
-      transform: translateX(0);
-      transition: transform 0.2s ease-in-out;
-    }
-    #networkIcon-second {
-      transform: translateX(0);
+    path {
+      transform: rotate(0) translate(0, 0);
       transition: transform 0.2s ease-in-out;
     }
   }
+
   ${({ isactive }) => {
     if (isactive) {
       return css`
         svg {
-          #networkIcon-first {
-            transform: translateX(16px);
-          }
-          #networkIcon-second {
-            transform: translateX(-16px);
+          path {
+            transform: rotate(10deg) translate(4px, -3px);
           }
         }
       `;
     }
   }}
 `;
-export default NetworkIcon;
+export default NotificationIcon;

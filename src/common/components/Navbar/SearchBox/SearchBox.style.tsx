@@ -27,6 +27,9 @@ export const Wrapper = styled.div<{
   @media (max-width: 768px) {
     left: 80px;
   }
+  @media (max-width: 425px) {
+    left: 60px;
+  }
 `;
 export const SearchInput = styled.div<{
   isactive: boolean;

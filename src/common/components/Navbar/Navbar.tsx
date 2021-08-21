@@ -2,15 +2,16 @@
 import NavLinkItems from './NavLinkItems/NavLinkItems';
 import NavPanelShowItems from './NavPanelShowItems/NavPanelShowItems';
 import SearchBox from './SearchBox/SearchBox';
+import NavOptionsItem from './NavOptionsItem/NavOptionsItem';
 //styles
 import { Container } from './Navbar.style';
 function Navbar() {
-  //TODO:handle nav items on mobile
   return (
     <Container>
       <SearchBox />
       <NavLinkItems />
       <NavPanelShowItems />
+      <NavOptionsItem />
     </Container>
   );
 }

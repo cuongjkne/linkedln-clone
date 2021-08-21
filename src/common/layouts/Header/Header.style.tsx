@@ -24,4 +24,7 @@ export const Container = styled.div`
       margin-right: 15px;
     }
   }
+  @media (max-width: 425px) {
+    padding: 0 5px 0 15px;
+  }
 `;

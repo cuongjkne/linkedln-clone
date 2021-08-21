@@ -4,8 +4,11 @@ import { useState } from 'react';
 import { NavPanelShowItem } from './NavPanelShowItems.style';
 //components
 import UserPanel from '../../Panel/UserPanel/UserPanel';
-import WorkPanel from '../../Panel/WorkPanel';
+import WorkPanel from '../../Panel/WorkPanel/WorkPanel';
 import CoverScreen from '../../CoverScreen/CoverScreen';
+
+//icons
+import MultiDotsIcon from '../../Icon/MultiDotsIcon';
 
 function NavPanelShowItems() {
   const [isUserItemActive, setIsUserItemActive] = useState(false);
@@ -27,8 +30,8 @@ function NavPanelShowItems() {
   };
   return (
     <>
-      <div id="navUserItem" tabIndex={0} onBlur={() => blurUserItem()}>
-        <NavPanelShowItem onMouseDown={() => toogleUserItemState()}>
+      <NavPanelShowItem tabIndex={0} onBlur={() => blurUserItem()}>
+        <div id="navUserItem" onMouseDown={() => toogleUserItemState()}>
           <img src="/images/user.svg" alt="user-img" />
           <p>
             Me{' '}
@@ -42,14 +45,12 @@ function NavPanelShowItems() {
               <path d="M8.8 10.66L14 5.12a.07.07 0 00-.07-.12H2.07a.07.07 0 00-.07.12l5.2 5.54a1.1 1.1 0 001.6 0z"></path>
             </svg>
           </p>
-        </NavPanelShowItem>
+        </div>
         <UserPanel isactive={isUserItemActive} />
-      </div>
-      <div tabIndex={0} onBlur={(e) => blurWorkItem(e)}>
-        <NavPanelShowItem onMouseDown={() => toogleWorkItemState()}>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor">
-            <path d="M10 10h4v4h-4v-4zm0 11h4v-4h-4v4zm-7-7h4v-4H3v4zm0 7h4v-4H3v4zM3 7h4V3H3v4zm14 7h4v-4h-4v4zm0-11v4h4V3h-4zm-7 4h4V3h-4v4zm7 14h4v-4h-4v4z"></path>
-          </svg>
+      </NavPanelShowItem>
+      <NavPanelShowItem tabIndex={0} onBlur={(e) => blurWorkItem(e)}>
+        <div onMouseDown={() => toogleWorkItemState()}>
+          <MultiDotsIcon />
           <p>
             Work{' '}
             <svg
@@ -62,9 +63,9 @@ function NavPanelShowItems() {
               <path d="M8.8 10.66L14 5.12a.07.07 0 00-.07-.12H2.07a.07.07 0 00-.07.12l5.2 5.54a1.1 1.1 0 001.6 0z"></path>
             </svg>
           </p>
-        </NavPanelShowItem>
+        </div>
         <WorkPanel isactive={isWorkItemActive} />
-      </div>
+      </NavPanelShowItem>
       <CoverScreen isactive={isWorkItemActive} />
     </>
   );

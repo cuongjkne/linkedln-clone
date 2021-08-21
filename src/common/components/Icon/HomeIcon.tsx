@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-function HomeIcon({ isactive }) {
+function HomeIcon({ isactive }: { isactive?: boolean }) {
   return (
     <Container isactive={isactive}>
       <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">

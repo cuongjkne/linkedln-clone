@@ -31,7 +31,6 @@ function SearchBox() {
     setIsSearchInputActive(true);
   };
   const closeSearchInputPanel = (e) => {
-    console.log(2);
     //avoid to reload too many time
     if (wrapper.current.contains(e.relatedTarget)) {
       return;

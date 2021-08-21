@@ -8,7 +8,7 @@ export const Container = styled.div`
     border-radius: 5px 0 5px 5px;
     position: absolute;
     top: 58px;
-    right: 2px;
+    right: 0px;
     background-color: white;
     width: 270px;
     cursor: auto;
@@ -27,8 +27,8 @@ export const Container = styled.div`
       }
     }
   }
-  @media (max-width: 1024px) {
-    height: 70vh;
+  @media (max-width: 768px) {
+    height: 300px;
   }
 `;
 

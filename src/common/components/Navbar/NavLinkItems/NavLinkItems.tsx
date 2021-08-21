@@ -5,35 +5,56 @@ import { NavLinkItem } from './NavLinkItems.style';
 
 //icons
 import { HomeIcon, MessageIcon, NetworkIcon, JobIcon, NotificationIcon } from '../../Icon/index';
+import React from 'react';
 
 function NavLinkItems() {
-  const history = useHistory();
-  const path = history.location.pathname;
-
-  return (
-    <>
-      <NavLinkItem isactive={path === '/feed' ? 1 : 0} to="/feed">
-        <HomeIcon isactive={path === '/feed' ? 1 : 0} />
-        <p>Home</p>
-      </NavLinkItem>
-      <NavLinkItem isactive={path === '/mynetwork' ? 1 : 0} to="/mynetwork">
-        <NetworkIcon isactive={path === '/mynetwork' ? 1 : 0} />
-        <p>My Network</p>
-      </NavLinkItem>
-      <NavLinkItem isactive={path === '/jobs' ? 1 : 0} to="/jobs">
-        <JobIcon isactive={path === '/jobs' ? 1 : 0} />
-        <p>Jobs</p>
-      </NavLinkItem>
-      <NavLinkItem isactive={path === '/messaging' ? 1 : 0} to="/messaging">
-        <MessageIcon isactive={path === '/messaging' ? 1 : 0} />
-        <p>Messaging</p>
-      </NavLinkItem>
-      <NavLinkItem isactive={path === '/notifications' ? 1 : 0} to="/notifications">
-        <NotificationIcon isactive={path === '/notifications' ? 1 : 0} />
-        <p>Notifications</p>
-      </NavLinkItem>
-    </>
-  );
+  //link items
+  const items = [
+    {
+      text: 'Home',
+      path: '/feed',
+      children: <HomeIcon />
+    },
+    {
+      text: 'My Network',
+      path: '/mynetwork',
+      children: <NetworkIcon />
+    },
+    {
+      text: 'Jobs',
+      path: '/jobs',
+      children: <JobIcon />
+    },
+    {
+      text: 'Messaging',
+      path: '/messaging',
+      className: 'nav_linkitems_hidden',
+      children: <MessageIcon />
+    },
+    {
+      text: 'Notifications',
+      path: '/notifications',
+      className: 'nav_linkitems_hidden',
+      children: <NotificationIcon />
+    }
+  ];
+  //render lists
+  const Items = items.map((item, index) => (
+    <Item key={index} text={item.text} path={item.path} className={item.className || ''}>
+      {item.children}
+    </Item>
+  ));
+  return <>{Items}</>;
 }
-
+const Item = ({ text, path, children, className }) => {
+  const history = useHistory();
+  const currentPath = history.location.pathname;
+  const isactive = currentPath === path;
+  return (
+    <NavLinkItem className={className} isactive={isactive ? 1 : 0} to={path}>
+      {React.cloneElement(children, { isactive })}
+      <p>{text}</p>
+    </NavLinkItem>
+  );
+};
 export default NavLinkItems;

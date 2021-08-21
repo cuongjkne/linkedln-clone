@@ -20,15 +20,6 @@ export const Container = styled.nav`
       width: 26px;
       height: 26px;
     }
-
-    #navUserItem {
-      position: relative;
-      border-right: 1px solid #eff2f8;
-      & > img:first-child {
-        width: 25px;
-        border-radius: 20px;
-      }
-    }
   }
 
   @media (max-width: 1024px) {
@@ -37,6 +28,7 @@ export const Container = styled.nav`
   @media (max-width: 768px) {
     svg {
       width: 23px;
+      height: 23px;
     }
   }
 `;
