@@ -1,19 +1,15 @@
-# Front-end linkedin-clone with React, Redux & TypeScript
+# Front-end linkedln-clone with React, Redux & TypeScript
 
 - Original: [Link](https://www.linkedin.com/)
 - Demo: **In processing**
 
 ## Installation
 
-```bash
-    npm install .
-```
+` npm install`
 
 ## Usage
 
-```bash
-    npm start
-```
+` npm start`
 
 ## Features
 
@@ -24,7 +20,7 @@
    - [ ] Login, logout
    - [ ] Manager posts
 
-## Frameworks/ Libs
+## Built with
 
 - [Typescript](https://www.typescriptlang.org/)
 - [React](https://facebook.github.io/react/)
