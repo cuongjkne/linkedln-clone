@@ -1,6 +1,8 @@
 //components
-import Navbar from '../../components/Navbar/Navbar';
 import { Container } from './Header.style';
+//components
+import Navbar from './Navbar/Navbar';
+
 function Header() {
   return (
     <Container>

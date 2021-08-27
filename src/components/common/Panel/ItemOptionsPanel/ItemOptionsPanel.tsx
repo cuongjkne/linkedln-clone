@@ -1,12 +1,12 @@
 import { useHistory } from 'react-router-dom';
 
-//icons
-import { MultiDotsIcon, MessageIcon, NotificationIcon } from '../../Icon/index';
 //styles
 import { Container, LinkItem, PanelShowItem } from './ItemOptionsPanel.style';
 //panels
 import UserPanel from '../UserPanel/UserPanel';
 import WorkPanel from '../WorkPanel/WorkPanel';
+//icons
+import { MessageIcon, NotificationIcon, MultiDotsIcon } from '../../Icon';
 
 function ItemsPanel({ isactive, userPanel, workPanel }) {
   const path = useHistory().location.pathname;

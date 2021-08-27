@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 //components
-import CoverScreen from '../../CoverScreen/CoverScreen';
+import CoverScreen from '../../../../common/CoverScreen/CoverScreen';
 
 //icons
-import ThreeDotsIcon from '../../Icon/ThreeDotsIcon';
+import { ThreeDotsIcon } from '../../../../common/Icon';
 
 //panels
-import ItemsPanel from '../../Panel/ItemOptionsPanel/ItemOptionsPanel';
+import ItemsPanel from '../../../../common/Panel/ItemOptionsPanel/ItemOptionsPanel';
 
 //styles
 import { Container } from './NavOptionsItem.style';

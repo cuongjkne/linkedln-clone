@@ -1,14 +1,14 @@
 import { useState } from 'react';
-
+import CoverScreen from '../../../../common/CoverScreen/CoverScreen';
+import { MultiDotsIcon } from '../../../../common/Icon';
+import UserPanel from '../../../../common/Panel/UserPanel/UserPanel';
+import WorkPanel from '../../../../common/Panel/WorkPanel/WorkPanel';
 //styles
 import { NavPanelShowItem } from './NavPanelShowItems.style';
+
 //components
-import UserPanel from '../../Panel/UserPanel/UserPanel';
-import WorkPanel from '../../Panel/WorkPanel/WorkPanel';
-import CoverScreen from '../../CoverScreen/CoverScreen';
 
 //icons
-import MultiDotsIcon from '../../Icon/MultiDotsIcon';
 
 function NavPanelShowItems() {
   const [isUserItemActive, setIsUserItemActive] = useState(false);
@@ -32,7 +32,7 @@ function NavPanelShowItems() {
     <>
       <NavPanelShowItem tabIndex={0} onBlur={() => blurUserItem()}>
         <div id="navUserItem" onMouseDown={() => toogleUserItemState()}>
-          <img src="/images/user.svg" alt="user-img" />
+          <img src="/images/user.jpg" alt="user.jpg" />
           <p>
             Me{' '}
             <svg

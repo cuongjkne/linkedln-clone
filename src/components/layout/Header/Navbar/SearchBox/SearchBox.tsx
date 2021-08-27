@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
+
 //components
-import SearchSuggestPanel from '../../Panel/SearchSuggestPanel/SearchSuggestPanel';
-import CoverScreen from '../../CoverScreen/CoverScreen';
+import CoverScreen from '../../../../common/CoverScreen/CoverScreen';
+import SearchSuggestPanel from '../../../../common/Panel/SearchSuggestPanel/SearchSuggestPanel';
 
 //style
 import { Wrapper, SearchInput, SearchItem } from './SearchBox.style';

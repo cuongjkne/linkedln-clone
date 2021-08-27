@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 //keyframes
-import clickNavItem from '../../Navbar/keyframes';
+import clickNavItem from '../../../layout/Header/Navbar/keyframes';
 
 export const Container = styled.div<{ isactive: boolean }>`
   display: flex;

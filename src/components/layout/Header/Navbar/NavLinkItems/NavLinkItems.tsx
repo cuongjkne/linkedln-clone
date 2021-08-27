@@ -1,11 +1,11 @@
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 //styles
 import { NavLinkItem } from './NavLinkItems.style';
 
 //icons
-import { HomeIcon, MessageIcon, NetworkIcon, JobIcon, NotificationIcon } from '../../Icon/index';
-import React from 'react';
+import { HomeIcon, NetworkIcon, JobIcon, MessageIcon, NotificationIcon } from '../../../../common/Icon';
 
 function NavLinkItems() {
   //link items

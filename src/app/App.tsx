@@ -1,9 +1,11 @@
 import { Switch, Route } from 'react-router';
 
+//components
+import Header from '../components/layout/Header/Header';
+import Home from '../components/layout/Home/Home';
+
 //styles
 import Global from './styles/global.style';
-//components
-import Header from '../common/layouts/Header/Header';
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
       <Switch>
         <Route exact path="/feed">
           <Header />
-          {/* <Home /> */}
+          <Home />
         </Route>
         <Route exact path="/mynetwork">
           <Header />

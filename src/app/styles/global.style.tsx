@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import px2vw from '../../common/utilities/px2vw';
+import px2vw from '../../utilities/px2vw';
 
 export const Global = createGlobalStyle`
     * {
@@ -39,14 +39,15 @@ export const Global = createGlobalStyle`
             font-size: ${px2vw(24)};
         }
     }
-    body {
+    .App {
         overflow-y: scroll;
         overflow-x: hidden;
         background-color: var(--background-color);
         font-family: 'Roboto', sans-serif;
         height: 100%;
         width: 100%;
-        color:white
+        color:white;
+        padding-top:52px
     }
 `;
 
