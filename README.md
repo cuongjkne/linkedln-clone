@@ -20,6 +20,14 @@
    - [ ] Login, logout
    - [ ] Manager posts
 
+## Responsive Design for:
+
+- [ ] Laptop (1440px)
+- [ ] Tablet (768px)
+- [ ] Mobile (375px)
+
+## File Struture:
+
 ## Built with
 
 - [Typescript](https://www.typescriptlang.org/)

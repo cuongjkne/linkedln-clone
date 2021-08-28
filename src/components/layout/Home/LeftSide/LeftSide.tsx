@@ -13,9 +13,10 @@ function LeftSide() {
 }
 
 const Container = styled.div`
-  border-radius: 8px;
-  overflow: hidden;
   width: 230px;
-  border: 1px solid #e0dfdc;
+  height: fit-content;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 `;
 export default LeftSide;
