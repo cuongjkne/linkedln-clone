@@ -1,4 +1,9 @@
 import { Link } from 'react-router-dom';
+//icons
+import ConnectIcon from '../../../../common/Icon/ConnectIcon';
+import MyItemsIcon from '../../../../common/Icon/MyItemsIcon';
+import PremiumIcon from '../../../../common/Icon/PremiumIcon';
+//styles
 import { Container, Header, ConnectionSection, PremiumSection, MyItems } from './PersonalPanel.style';
 
 function PersonalPanel() {
@@ -6,6 +11,7 @@ function PersonalPanel() {
     <Container>
       <Header>
         <img src="/images/background-user.svg" />
+
         <div>
           <Link to="">
             <img src="/images/user.jpg" />
@@ -19,18 +25,18 @@ function PersonalPanel() {
           <p>
             <span>Connections</span> <br /> Grow your network
           </p>
-          <img src="/images/connect-icon.svg" />
+          <ConnectIcon />
         </div>
       </ConnectionSection>
       <PremiumSection to="/">
         <p>Access exclusive tools & insights</p>
         <p>
-          <img src="/images/premium-icon.svg" />
+          <PremiumIcon />
           Try Premium for free
         </p>
       </PremiumSection>
       <MyItems to="/">
-        <img src="/images/myitems-icon.svg" />
+        <MyItemsIcon />
         <span>My items</span>
       </MyItems>
     </Container>

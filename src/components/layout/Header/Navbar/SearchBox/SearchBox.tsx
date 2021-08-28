@@ -3,6 +3,7 @@ import { useHistory } from 'react-router';
 
 //components
 import CoverScreen from '../../../../common/CoverScreen/CoverScreen';
+import SearchIcon from '../../../../common/Icon/SearchIcon';
 import SearchSuggestPanel from '../../../../common/Panel/SearchSuggestPanel/SearchSuggestPanel';
 
 //style
@@ -43,7 +44,7 @@ function SearchBox() {
     <>
       <Wrapper ref={wrapper} tabIndex={1} isactive={isSearchInputActive} onFocus={(e) => showSearchInputPanel(e)}>
         <SearchInput isactive={isSearchInputActive}>
-          <img src="/images/search-icon.svg" alt="search-icon" />
+          <SearchIcon />
           <input type="text" placeholder="Search" ref={input} onBlur={(e) => closeSearchInputPanel(e)} />
         </SearchInput>
         <SearchSuggestPanel isactive={isSearchInputActive} />

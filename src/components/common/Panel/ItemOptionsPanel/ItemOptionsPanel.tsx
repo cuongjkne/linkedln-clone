@@ -22,7 +22,7 @@ function ItemsPanel({ isactive, userPanel, workPanel }) {
           <NotificationIcon isactive={path === '/notifications'} />
         </LinkItem>
         <PanelShowItem onClick={showUserPanel}>
-          <img src="/images/user.svg" alt="user-img" />
+          <img src="/images/user.jpg" alt="user.jpg" />
         </PanelShowItem>
         <PanelShowItem onClick={showWorkPanel}>
           <MultiDotsIcon />

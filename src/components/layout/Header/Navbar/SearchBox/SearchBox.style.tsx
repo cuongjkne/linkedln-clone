@@ -44,10 +44,12 @@ export const SearchInput = styled.div<{
     position: relative;
     background-color: #eff2f8;
 
-    img {
+    svg {
       position: absolute;
       top: 25%;
       left: 10px;
+      width: 16px !important;
+      height: 16px !important;
     }
     input {
       border-radius: var(--border-radius-small);

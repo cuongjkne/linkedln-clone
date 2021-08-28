@@ -9,6 +9,8 @@ function RightSide() {
     </Container>
   );
 }
-const Container = styled.div``;
+const Container = styled.div`
+  width: 320px;
+`;
 
 export default RightSide;

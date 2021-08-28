@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import SearchIcon from '../../Icon/SearchIcon';
 
 function Suggestion({ text, to }) {
   return (
     <Container to={to}>
-      <img src="/images/search-icon.svg" alt="search-icon" />
+      <SearchIcon />
       <span>{text}</span>
     </Container>
   );
@@ -16,6 +17,10 @@ const Container = styled(Link)`
   width: 100%;
   height: 40px;
   padding: 20px;
+  svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
   span {
     margin-left: 20px;
     font-size: 16px;

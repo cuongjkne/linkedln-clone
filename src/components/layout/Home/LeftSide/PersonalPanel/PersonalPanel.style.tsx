@@ -76,7 +76,7 @@ export const PremiumSection = styled(Link)`
     display: flex;
     align-items: center;
     font-weight: 500;
-    img {
+    svg {
       width: 15px;
       margin-right: 5px;
     }
@@ -88,7 +88,7 @@ export const PremiumSection = styled(Link)`
 export const MyItems = styled(Link)`
   display: flex !important;
   align-items: center;
-  img {
+  svg {
     margin-right: 5px;
   }
   &:hover {
