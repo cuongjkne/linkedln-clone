@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
-//extends
+//styles
 import { Panel } from '../../../../common/Panel/Panel.style';
 
 export const Container = styled(Panel)`
   padding: 15px;
+  margin-bottom: 5px;
   p,
-  h3 {
+  h3,
+  h1 {
     font-weight: 500;
     font-size: 14px;
     color: #444444;
@@ -18,7 +20,8 @@ export const Container = styled(Panel)`
     border-radius: 8px;
     padding: 5px 8px;
     width: fit-content;
-    color: #838383;
+    color: #797979;
+    font-weight: 400;
     svg {
       margin-left: 4px;
       fill: rgb(102 102 102);
@@ -28,7 +31,7 @@ export const Container = styled(Panel)`
     }
   }
 `;
-export const Header = styled.div`
+export const Title = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +43,7 @@ export const Header = styled.div`
     cursor: pointer;
   }
 `;
-export const RecommendedUserList = styled.div`
+export const List = styled.div`
   padding-top: 20px;
   padding-bottom: 5px;
 `;
