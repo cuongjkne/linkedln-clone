@@ -3,9 +3,9 @@ import styled from 'styled-components';
 //styles
 import { Panel } from '../../../../common/Panel/Panel.style';
 
-export const Container = styled(Panel)`
-  padding: 15px;
+export const Container = styled(Panel)<{ customStyle?: string }>`
   margin-bottom: 5px;
+
   p,
   h3,
   h1 {
@@ -14,6 +14,8 @@ export const Container = styled(Panel)`
     color: #444444;
   }
   & > a p {
+    margin: 10px;
+
     display: flex;
     align-items: center;
     font-size: 13.5px;
@@ -30,12 +32,14 @@ export const Container = styled(Panel)`
       background-color: rgb(235 235 235);
     }
   }
+  ${({ customStyle }) => customStyle}
 `;
 export const Title = styled.div`
+  margin: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  p {
+  h1 {
     font-size: 15.5px;
   }
   svg {
@@ -43,7 +47,4 @@ export const Title = styled.div`
     cursor: pointer;
   }
 `;
-export const List = styled.div`
-  padding-top: 20px;
-  padding-bottom: 5px;
-`;
+export const List = styled.div``;

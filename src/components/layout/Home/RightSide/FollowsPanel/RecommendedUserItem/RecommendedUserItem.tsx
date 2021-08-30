@@ -6,14 +6,14 @@ import styled from 'styled-components';
 import LinkdelnSmallIcon from '../../../../../common/Icon/LinkdelnSmallIcon';
 import PlusIcon from '../../../../../common/Icon/PlusIcon';
 
-function RecommendedUserItem({ to, imgSrc, name, bio }) {
+function RecommendedUserItem({ linkUrl, imgSrc, name, bio }) {
   return (
     <Container>
-      <Link to={to}>
+      <Link to={linkUrl}>
         <img src={imgSrc} alt="user.jpg" />
       </Link>
       <div>
-        <Link to={to}>
+        <Link to={linkUrl}>
           <h3>
             {name}
             <LinkdelnSmallIcon />
@@ -30,6 +30,8 @@ function RecommendedUserItem({ to, imgSrc, name, bio }) {
 const Container = styled.div`
   display: flex;
   margin-bottom: 15px;
+  padding: 0 15px;
+
   & > a {
     margin-right: 15px;
     img {

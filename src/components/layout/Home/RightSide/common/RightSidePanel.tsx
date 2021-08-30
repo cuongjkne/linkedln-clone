@@ -7,10 +7,16 @@ import InfoIcon from '../../../../common/Icon/InfoIcon';
 
 //styles
 import { Container, Title, List } from './RightSidePanel.style';
-
-function RightSidePanel({ title, items, linkText, linkUrl }) {
+interface RightSidePanel {
+  title: string;
+  items: Array<any>;
+  linkText: string;
+  linkUrl: string;
+  customStyle?: any;
+}
+function RightSidePanel({ title, items, linkText, linkUrl, customStyle }: RightSidePanel) {
   return (
-    <Container>
+    <Container customStyle={customStyle}>
       <Title>
         <h1>{title}</h1>
         <InfoIcon />
