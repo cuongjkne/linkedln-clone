@@ -35,7 +35,7 @@ export const Container = styled(Panel)<{ customStyle?: string }>`
   ${({ customStyle }) => customStyle}
 `;
 export const Title = styled.div`
-  margin: 15px;
+  margin: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
